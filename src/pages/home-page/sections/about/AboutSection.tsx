@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import styles from "./AboutSection.module.css";
-import { PageSection } from "@/shared/ui/page-section";
+import { PageSection } from "../../../../shared/ui/page-section";
 import cn from "classnames";
 
 interface AboutSectionProps {}

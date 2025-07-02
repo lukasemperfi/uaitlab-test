@@ -1,9 +1,9 @@
 import { type FC } from "react";
 import styles from "./ReviewsSection.module.css";
-import { PageSection } from "@/shared/ui/page-section";
+import { PageSection } from "../../../../shared/ui/page-section";
 import cn from "classnames";
-import { SocialButtons } from "@/shared/ui/social-buttons/SocialButtons";
-import { DecoratedFrame } from "@/shared/ui/decorated-frame";
+import { SocialButtons } from "../../../../shared/ui/social-buttons/SocialButtons";
+import { DecoratedFrame } from "../../../../shared/ui/decorated-frame";
 //
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -11,14 +11,14 @@ import { Navigation } from "swiper/modules";
 import image1 from "./images/image-1.jpg";
 import image2 from "./images/image-2.jpg";
 
-import "swiper/css";
-import "swiper/css/navigation";
+// import "swiper/css";
+// import "swiper/css/navigation";
 
-import { useTestimonialSlider } from "@/shared/hooks";
-import { CaretRightIcon } from "@/shared/icons/CaretRightIcon";
-import { CaretLeftIcon } from "@/shared/icons/CaretLeftIcon";
-import { PlayIcon } from "@/shared/icons/PlayIcon";
-import { Button } from "@/shared/ui/button";
+import { useTestimonialSlider } from "../../../../shared/hooks";
+import { CaretRightIcon } from "../../../../shared/icons/CaretRightIcon";
+import { CaretLeftIcon } from "../../../../shared/icons/CaretLeftIcon";
+import { PlayIcon } from "../../../../shared/icons/PlayIcon";
+import { Button } from "../../../../shared/ui/button";
 
 interface ReviewsSectionProps {}
 

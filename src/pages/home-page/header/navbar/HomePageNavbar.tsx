@@ -1,14 +1,13 @@
-import { BackpackIcon } from "@/shared/icons/BackpackIcon";
-import { Button } from "@/shared/ui/button";
-import { Navbar } from "@/shared/ui/navbar";
-import { BurgerButton, Logo, NavbarItem } from "@/shared/ui/navbar/Navbar";
+import { Button } from "../../../../shared/ui/button";
+import { Navbar } from "../../../../shared/ui/navbar";
+import { BurgerButton, Logo, NavbarItem } from "../../../../shared/ui/navbar/Navbar";
 import { useState, type FC, type ComponentProps } from "react";
 import styles from "./HomePageNavbar.module.css";
 import cn from "classnames";
-import { CaretDownIcon } from "@/shared/icons/CaretDownIcon";
-import { CloseIcon } from "@/shared/icons/CloseIcon";
-import { useScrollLock } from "@/shared/hooks/useScrollLock";
-import { DecoratedFrame } from "@/shared/ui/decorated-frame";
+import { CaretDownIcon } from "../../../../shared/icons/CaretDownIcon";
+import { CloseIcon } from "../../../../shared/icons/CloseIcon";
+import { useScrollLock } from "../../../../shared/hooks/useScrollLock";
+import { DecoratedFrame } from "../../../../shared/ui/decorated-frame";
 import {
   categoryImage1,
   categoryImage2,
@@ -16,11 +15,12 @@ import {
   categoryImage4,
   categoryImage5,
 } from "./images";
-import { LinkArrowIcon } from "@/shared/icons/LinkArrowIcon";
+import { LinkArrowIcon } from "../../../../shared/icons/LinkArrowIcon";
 import { Link } from "react-router";
-import { SocialButtons } from "@/shared/ui/social-buttons/SocialButtons";
+import { SocialButtons } from "../../../../shared/ui/social-buttons/SocialButtons";
 import { Portal } from "@radix-ui/react-portal";
 import { NavigationMenu } from "./NavigationMenu";
+import { BackpackIcon } from "../../../../shared/icons/BackpackIcon";
 
 export const categoryMenuItems = [
   {

@@ -3,9 +3,9 @@ import { type ComponentProps, type FC } from "react";
 import cn from "classnames";
 
 import styles from "./Navbar.module.css";
-import { BurgerIcon } from "@/shared/icons/Burger";
-import logoXs from "@/assets/icons/logo-xs.svg";
-import logoXl from "@/assets/icons/logo-xl.svg";
+import { BurgerIcon } from "../../../shared/icons/Burger";
+import logoXs from "../../../assets/icons/logo-xs.svg";
+import logoXl from "../../../assets/icons/logo-xl.svg";
 import { Link } from "react-router";
 
 const navbar = cva(styles.navbar);

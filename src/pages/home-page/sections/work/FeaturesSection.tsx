@@ -1,9 +1,9 @@
 import { type FC, type ReactNode } from "react";
 import styles from "./FeaturesSection.module.css";
-import { PageSection } from "@/shared/ui/page-section";
+import { PageSection } from "../../../../shared/ui/page-section";
 import { TestimonialSlider } from "./TestimonialSlider";
 import { WorkflowDiagram } from "./WorkflowDiagram";
-import { useTestimonialSlider } from "@/shared/hooks";
+import { useTestimonialSlider } from "../../../../shared/hooks";
 import { OfferCard, SlideCard, type SlideCardProps } from "./SlideCard";
 
 export interface TestimonialSlide {

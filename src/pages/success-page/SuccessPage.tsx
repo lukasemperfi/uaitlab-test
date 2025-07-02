@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import styles from "./SuccessPage.module.css";
-import { Button } from "@/shared/ui/button";
-import { LinkArrowIcon } from "@/shared/icons/LinkArrowIcon";
+import { Button } from "../../shared/ui/button";
+import { LinkArrowIcon } from "../../shared/icons/LinkArrowIcon";
 import { Link } from "react-router";
 
 interface SuccessPageProps {}

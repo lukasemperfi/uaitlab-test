@@ -1,5 +1,5 @@
 import { forwardRef, useId, createContext, useContext } from "react";
-import type { InputHTMLAttributes, ReactNode } from "react";
+import type { ComponentProps, FC, InputHTMLAttributes, ReactNode } from "react";
 import cn from "classnames";
 import styles from "./Input.module.css";
 
@@ -63,8 +63,7 @@ const FieldLabel = ({ children, className }: FieldLabelProps) => {
   );
 };
 
-interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "className"> {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   endIcon?: ReactNode;
   endButton?: ReactNode;
@@ -104,14 +103,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   }
 );
 
-Input.displayName = "Input";
-
-interface FieldErrorTextProps {
-  children: ReactNode;
-  className?: string;
+interface FieldErrorTextProps extends ComponentProps<"div"> {
+  message: string;
 }
 
-const FieldErrorText = ({ children, className }: FieldErrorTextProps) => {
+const FieldErrorText: FC<FieldErrorTextProps> = ({
+  message = "",
+  className,
+}) => {
   const { invalid } = useFieldContext();
 
   if (!invalid) return null;
@@ -133,18 +132,17 @@ const FieldErrorText = ({ children, className }: FieldErrorTextProps) => {
         </svg>
       </div>
       <span className={styles.errorText}>Помилка</span>
-      <div className={styles.errorMessage}>{children}</div>
+      <div className={styles.errorMessage}>{message}</div>
     </div>
   );
 };
 
-const Field = {
-  Root: FieldRoot,
-  Label: FieldLabel,
-  ErrorText: FieldErrorText,
+export {
+  FieldRoot as Root,
+  FieldLabel as Label,
+  Input,
+  FieldErrorText as ErrorText,
 };
-
-export { Field, Input };
 export type {
   FieldRootProps,
   FieldLabelProps,

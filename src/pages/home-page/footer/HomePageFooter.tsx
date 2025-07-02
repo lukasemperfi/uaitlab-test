@@ -1,9 +1,9 @@
 import { type FC } from "react";
 import styles from "./HomePageFooter.module.css";
-import { PageSection } from "@/shared/ui/page-section";
-import logo from "@/assets/icons/logo-horizontal-white.svg";
-import { SocialButtons } from "@/shared/ui/social-buttons/SocialButtons";
-import { Button } from "@/shared/ui/button";
+import { PageSection } from "../../../shared/ui/page-section";
+import logo from "../../../assets/icons/logo-horizontal-white.svg";
+import { SocialButtons } from "../../../shared/ui/social-buttons/SocialButtons";
+import { Button } from "../../../shared/ui/button";
 import { Link } from "react-router";
 import cn from "classnames";
 import { categoryMenuItems } from "../header/navbar/HomePageNavbar";

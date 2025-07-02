@@ -5,7 +5,7 @@ import {
   InstagramIcon,
   TikTokIcon,
   YouTubeIcon,
-} from "@/shared/icons";
+} from "../../../shared/icons";
 import { Button, type ButtonProps } from "../button";
 
 const socialItems = [

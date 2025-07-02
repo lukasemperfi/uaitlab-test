@@ -2,15 +2,16 @@ import cn from "classnames";
 import React from "react";
 import { FormProvider, useForm, useFormContext } from "react-hook-form";
 import styles from "./CheckoutPage.module.css";
-import { ProductCard } from "@/shared/ui/product-card";
-import { Field, Input } from "@/shared/ui/input";
-import { SearchIcon } from "@/shared/icons";
-import { CaretDownIcon } from "@/shared/icons/CaretDownIcon";
-import { RadioInput } from "@/shared/ui/radio-input";
+import { ProductCard } from "../../shared/ui/product-card";
+
+import { SearchIcon } from "../../shared/icons";
+import { CaretDownIcon } from "../../shared/icons/CaretDownIcon";
+import { RadioInput } from "../../shared/ui/radio-input";
 import { PriceSummary } from "./PriceSummary";
-import { Button } from "@/shared/ui/button";
-import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
+import { Button } from "../../shared/ui/button";
+import { useMediaQuery } from "../../shared/hooks/useMediaQuery";
 import { useNavigate } from "react-router";
+import * as Field from "../../shared/ui/input";
 
 // Order interface based on product card data
 export interface OrderItem {
@@ -114,7 +115,10 @@ export const CheckoutPage = () => {
                 <ContactFieldsSection />
 
                 <DeliverySection />
-                <ContactMethodSection />
+                <ContactMethodSection
+                  selectedContactMethod={selectedContactMethod}
+                  handleRadioChange={handleRadioChange}
+                />
               </main>
 
               <aside className={styles.col3}>
@@ -131,7 +135,10 @@ export const CheckoutPage = () => {
 
               <DeliverySection />
 
-              <ContactMethodSection />
+              <ContactMethodSection
+                selectedContactMethod={selectedContactMethod}
+                handleRadioChange={handleRadioChange}
+              />
 
               <SummarySection />
             </div>
@@ -175,12 +182,18 @@ const OrdersList = ({ orders }: OrdersListProps) => (
   </div>
 );
 
-const ContactMethodSection = () => {
+interface ContactMethodSectionProps {
+  selectedContactMethod: string;
+  handleRadioChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const ContactMethodSection = ({
+  selectedContactMethod,
+  handleRadioChange,
+}: ContactMethodSectionProps) => {
   const {
     register,
     formState: { errors },
-    selectedContactMethod,
-    handleRadioChange,
   } = useFormContext();
 
   return (
@@ -234,7 +247,7 @@ const ContactMethodSection = () => {
         {selectedContactMethod === "phone" && (
           <Field.Root invalid={!!errors.phoneContact}>
             <Field.Label>Номер телефону</Field.Label>
-            <Input
+            <Field.Input
               type="tel"
               placeholder="+380"
               {...register("phoneContact", {
@@ -246,7 +259,9 @@ const ContactMethodSection = () => {
               })}
             />
             {errors.phoneContact && (
-              <Field.ErrorText>{errors.phoneContact.message}</Field.ErrorText>
+              <Field.ErrorText
+                message={errors.phoneContact.message as string}
+              />
             )}
           </Field.Root>
         )}
@@ -255,7 +270,7 @@ const ContactMethodSection = () => {
         {selectedContactMethod === "viber" && (
           <Field.Root invalid={!!errors.viberContact}>
             <Field.Label>Viber</Field.Label>
-            <Input
+            <Field.Input
               type="text"
               placeholder="Viber username"
               {...register("viberContact", {
@@ -267,7 +282,9 @@ const ContactMethodSection = () => {
               })}
             />
             {errors.viberContact && (
-              <Field.ErrorText>{errors.viberContact.message}</Field.ErrorText>
+              <Field.ErrorText
+                message={errors.viberContact.message as string}
+              />
             )}
           </Field.Root>
         )}
@@ -276,7 +293,7 @@ const ContactMethodSection = () => {
         {selectedContactMethod === "telegram" && (
           <Field.Root invalid={!!errors.telegramContact}>
             <Field.Label>Telegram</Field.Label>
-            <Input
+            <Field.Input
               type="text"
               placeholder="@username"
               {...register("telegramContact", {
@@ -288,9 +305,9 @@ const ContactMethodSection = () => {
               })}
             />
             {errors.telegramContact && (
-              <Field.ErrorText>
-                {errors.telegramContact.message}
-              </Field.ErrorText>
+              <Field.ErrorText
+                message={errors.telegramContact.message as string}
+              />
             )}
           </Field.Root>
         )}
@@ -299,7 +316,7 @@ const ContactMethodSection = () => {
         {selectedContactMethod === "whatsapp" && (
           <Field.Root invalid={!!errors.whatsappContact}>
             <Field.Label>WhatsApp</Field.Label>
-            <Input
+            <Field.Input
               type="tel"
               placeholder="+380"
               {...register("whatsappContact", {
@@ -311,9 +328,9 @@ const ContactMethodSection = () => {
               })}
             />
             {errors.whatsappContact && (
-              <Field.ErrorText>
-                {errors.whatsappContact.message}
-              </Field.ErrorText>
+              <Field.ErrorText
+                message={errors.whatsappContact.message as string}
+              />
             )}
           </Field.Root>
         )}
@@ -322,7 +339,7 @@ const ContactMethodSection = () => {
         {selectedContactMethod === "signal" && (
           <Field.Root invalid={!!errors.signalContact}>
             <Field.Label>Signal</Field.Label>
-            <Input
+            <Field.Input
               type="tel"
               placeholder="+380"
               {...register("signalContact", {
@@ -334,7 +351,9 @@ const ContactMethodSection = () => {
               })}
             />
             {errors.signalContact && (
-              <Field.ErrorText>{errors.signalContact.message}</Field.ErrorText>
+              <Field.ErrorText
+                message={errors.signalContact.message as string}
+              />
             )}
           </Field.Root>
         )}
@@ -399,7 +418,7 @@ ContactFieldsSectionProps) => {
             invalid={!!errors.lastName}
           >
             <Field.Label>Призвище</Field.Label>
-            <Input
+            <Field.Input
               placeholder="Введіть призвище"
               {...register("lastName", {
                 required: "Призвище обов'язкове",
@@ -410,7 +429,7 @@ ContactFieldsSectionProps) => {
               })}
             />
             {errors.lastName && (
-              <Field.ErrorText>{errors?.lastName?.message}</Field.ErrorText>
+              <Field.ErrorText message={errors?.lastName?.message as string} />
             )}
           </Field.Root>
 
@@ -419,7 +438,7 @@ ContactFieldsSectionProps) => {
             invalid={!!errors.firstName}
           >
             <Field.Label>Ім'я</Field.Label>
-            <Input
+            <Field.Input
               placeholder="Введіть ім'я"
               {...register("firstName", {
                 required: "Ім'я обов'язкове",
@@ -430,7 +449,7 @@ ContactFieldsSectionProps) => {
               })}
             />
             {errors.firstName && (
-              <Field.ErrorText>{errors.firstName.message}</Field.ErrorText>
+              <Field.ErrorText message={errors.firstName.message as string} />
             )}
           </Field.Root>
 
@@ -439,7 +458,7 @@ ContactFieldsSectionProps) => {
             invalid={!!errors.middleName}
           >
             <Field.Label>По-батькові</Field.Label>
-            <Input
+            <Field.Input
               placeholder="Введіть по-батькові"
               {...register("middleName", {
                 required: "По-батькові обов'язкове",
@@ -450,7 +469,7 @@ ContactFieldsSectionProps) => {
               })}
             />
             {errors.middleName && (
-              <Field.ErrorText>{errors.middleName.message}</Field.ErrorText>
+              <Field.ErrorText message={errors.middleName.message as string} />
             )}
           </Field.Root>
 
@@ -459,7 +478,7 @@ ContactFieldsSectionProps) => {
             invalid={!!errors.phone}
           >
             <Field.Label>Номер телефону</Field.Label>
-            <Input
+            <Field.Input
               placeholder="+380"
               {...register("phone", {
                 required: "Номер телефону обов'язковий",
@@ -470,7 +489,7 @@ ContactFieldsSectionProps) => {
               })}
             />
             {errors.phone && (
-              <Field.ErrorText>{errors.phone.message}</Field.ErrorText>
+              <Field.ErrorText message={errors.phone.message as string} />
             )}
           </Field.Root>
         </div>
@@ -492,7 +511,7 @@ const DeliverySection = () => {
         <div className={styles.fieldsList}>
           <Field.Root invalid={!!errors.city}>
             <Field.Label>Місто / Населений пункт</Field.Label>
-            <Input
+            <Field.Input
               placeholder="Введіть місто / Населений пункт"
               {...register("city", {
                 required: "Місто обов'язкове",
@@ -508,13 +527,13 @@ const DeliverySection = () => {
               }
             />
             {errors.city && (
-              <Field.ErrorText>{errors.city.message}</Field.ErrorText>
+              <Field.ErrorText message={errors.city.message as string} />
             )}
           </Field.Root>
 
           <Field.Root invalid={!!errors.departmentNumber}>
             <Field.Label>Номер відділення</Field.Label>
-            <Input
+            <Field.Input
               placeholder="Оберіть номер відділення НП"
               {...register("departmentNumber", {
                 required: "Номер відділення обов'язковий",
@@ -522,9 +541,9 @@ const DeliverySection = () => {
               endIcon={<CaretDownIcon />}
             />
             {errors.departmentNumber && (
-              <Field.ErrorText>
-                {errors.departmentNumber.message}
-              </Field.ErrorText>
+              <Field.ErrorText
+                message={errors.departmentNumber.message as string}
+              />
             )}
           </Field.Root>
         </div>

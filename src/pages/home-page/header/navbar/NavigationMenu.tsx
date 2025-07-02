@@ -1,6 +1,6 @@
 import { useLocation } from "react-router";
-import * as NavMenu from "@/shared/ui/nav-menu";
-import type { NavMenuItem } from "@/shared/ui/nav-menu/NavMenu";
+import * as NavMenu from "../../../../shared/ui/nav-menu";
+import type { NavMenuItem } from "../../../../shared/ui/nav-menu/NavMenu";
 
 export const navMenuItems: NavMenuItem[] = [
   {

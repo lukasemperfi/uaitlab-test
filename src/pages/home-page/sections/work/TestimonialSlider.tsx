@@ -4,13 +4,13 @@ import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import { type Swiper as SwiperType } from "swiper";
 import styles from "./TestimonialSlider.module.css";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
-import { CaretLeftIcon } from "@/shared/icons/CaretLeftIcon";
-import { CaretRightIcon } from "@/shared/icons/CaretRightIcon";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import "swiper/css/effect-fade";
+import { CaretLeftIcon } from "../../../../shared/icons/CaretLeftIcon";
 import type { TestimonialSlide } from "./FeaturesSection";
+import { CaretRightIcon } from "../../../../shared/icons/CaretRightIcon";
 
 interface TestimonialSliderProps extends SwiperProps {
   swiperRef: React.RefObject<SwiperType | null>;

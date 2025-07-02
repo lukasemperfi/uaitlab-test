@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import styles from "./HeroSection.module.css";
-import { PageSection } from "@/shared/ui/page-section";
-import { LinkArrowIcon } from "@/shared/icons/LinkArrowIcon";
+import { PageSection } from "../../../../shared/ui/page-section";
+import { LinkArrowIcon } from "../../../../shared/icons/LinkArrowIcon";
 import image375 from "./images/image-375.jpg";
 import image768 from "./images/image-768.jpg";
 import image1024 from "./images/image-1024.jpg";

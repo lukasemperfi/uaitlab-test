@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import styles from "./SlideCard.module.css";
-import { BackpackLargeIcon } from "@/shared/icons/BackpackLargeIcon";
-import { Button } from "@/shared/ui/button";
-import { LinkArrowIcon } from "@/shared/icons/LinkArrowIcon";
+import { BackpackLargeIcon } from "../../../../shared/icons/BackpackLargeIcon";
+import { Button } from "../../../../shared/ui/button";
+import { LinkArrowIcon } from "../../../../shared/icons/LinkArrowIcon";
 
 export interface SlideCardProps {
   slide: {

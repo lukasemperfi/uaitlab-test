@@ -1,9 +1,9 @@
 import { type FC } from "react";
 import styles from "./StatsSection.module.css";
-import { PageSection } from "@/shared/ui/page-section";
+import { PageSection } from "../../../../shared/ui/page-section";
 import cn from "classnames";
-import { LinkArrowIcon } from "@/shared/icons/LinkArrowIcon";
-import { DecoratedFrame } from "@/shared/ui/decorated-frame";
+import { LinkArrowIcon } from "../../../../shared/icons/LinkArrowIcon";
+import { DecoratedFrame } from "../../../../shared/ui/decorated-frame";
 
 import sendedImage from "./images/image-1.png";
 import spendedImage from "./images/image-2.png";

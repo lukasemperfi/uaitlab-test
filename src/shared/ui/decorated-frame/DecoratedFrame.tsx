@@ -1,7 +1,7 @@
 import cn from "classnames";
 import type { FC, ReactNode } from "react";
 import styles from "./DecoratedFrame.module.css";
-import { FigureIcon } from "@/shared/icons/FigureIcon";
+import { FigureIcon } from "../../../shared/icons/FigureIcon";
 
 interface DecoratedFrameProps {
   children?: ReactNode;

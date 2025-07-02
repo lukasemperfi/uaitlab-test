@@ -1,5 +1,5 @@
 import styles from "./CheckoutFooter.module.css";
-import { PageSection } from "@/shared/ui/page-section";
+import { PageSection } from "../../shared/ui/page-section";
 
 export const CheckoutFooter = () => {
   return (

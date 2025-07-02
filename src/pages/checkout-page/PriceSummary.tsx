@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./PriceSummary.module.css";
-import { formatPrice } from "@/shared/utils";
+import { formatPrice } from "../../shared/utils";
 
 export interface PriceSummaryProps {
   cost: number;

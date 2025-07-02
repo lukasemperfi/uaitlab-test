@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import styles from "./ProductCard.module.css";
 import cn from "classnames";
-import { TrashIcon } from "@/shared/icons";
+import { TrashIcon } from "../../../shared/icons";
 import { ProductCardControls } from "./ProductCardControls";
 import mockImage from "./order-card-image.jpg";
 
