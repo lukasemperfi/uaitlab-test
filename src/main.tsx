@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         children: [
           { index: true, Component: CheckoutPage },
           {
-            path: "/success",
+            path: "success",
             Component: SuccessPage,
           },
         ],
