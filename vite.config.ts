@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/uaitlab-test/",
+  // base: "/uaitlab-test/",
   plugins: [react()],
   resolve: {
     alias: {
