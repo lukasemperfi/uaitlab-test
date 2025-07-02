@@ -1,0 +1,20 @@
+.base {
+    margin: auto;
+}
+
+.space-none {
+    padding: inherit;
+}
+
+.space-sm {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.space-xl {
+    padding: 32px;
+}
+
+.maxW-xl {
+    max-width: 1542px;
+}

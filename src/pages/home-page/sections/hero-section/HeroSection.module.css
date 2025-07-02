@@ -1,0 +1,114 @@
+.root .wrapper {
+    position: relative;
+    z-index: 1;
+    height: 562px;
+    border-radius: 16px;
+    display: flex;
+
+    align-items: flex-end;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.heroImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.heroImageBlur {
+    filter: blur(16px);
+    transition: filter 0.4s ease;
+}
+
+.contentActions {
+    width: 100%;
+    max-width: 459px;
+    margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+
+    .contentActions {
+        margin-top: 48px;
+    }
+
+    .root .wrapper {
+        height: 532px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .content {}
+
+    .root .wrapper {
+        height: 720px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .content {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .root .wrapper {
+        height: 920px;
+    }
+
+    .root .containerInner {
+        padding-left: 181px;
+        padding-right: 181px;
+        margin: 0;
+    }
+}
+
+.contentTitle {
+    max-width: 960px;
+}
+
+
+.title {
+    font-size: 36px;
+    line-height: 1.2;
+    color: white;
+    font-weight: 400;
+
+}
+
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 56px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .title {
+        font-size: 72px;
+    }
+}
+
+.containerInner {
+    padding-bottom: 28px;
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .contentActions {
+        max-width: 554px;
+    }
+}

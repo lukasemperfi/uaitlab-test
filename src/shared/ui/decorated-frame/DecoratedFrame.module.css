@@ -1,0 +1,68 @@
+.decoratedFrame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.decoratedFrame.backgroundColor-blue {
+    background-color: #0F5EBB;
+}
+
+.decoratedFrame.backgroundColor-dark {
+    background-color: #1C2F43;
+}
+
+.decoratedFrame.backgroundColor-lightGray {
+    background-color: #F6F7F9;
+}
+
+
+.decoratedFrameOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFD719;
+    opacity: 0.6;
+}
+
+.decoratedFrameOverlay.color-gold {
+    background-color: #FFD719;
+}
+
+.decoratedFrameOverlay.color-blue {
+    background-color: #0F5EBB;
+}
+
+
+.decoratedFrameFigure {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+}
+
+.decoratedFrameFigure.color-gold {
+    color: #FFD719;
+}
+
+.decoratedFrameFigure.color-white {
+    color: #FFFFFF;
+}
+
+
+
+.decoratedFrameImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    object-fit: cover;
+}

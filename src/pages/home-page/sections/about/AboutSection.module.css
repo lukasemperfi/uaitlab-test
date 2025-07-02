@@ -1,0 +1,49 @@
+@media(min-width: 768px) {
+    .content {
+        flex-direction: row;
+        gap: 48px;
+    }
+}
+
+
+.contentTitle {
+    border-bottom: 1px solid #D0D0D0;
+    padding-bottom: 24px;
+}
+
+@media(min-width: 768px) {
+    .contentTitle {
+        border: none;
+        flex: 1 1 40%;
+    }
+}
+
+@media(min-width: 1024px) {
+    .contentTitle {
+        flex: 1 1 30%;
+    }
+}
+
+
+.contentBody {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media(min-width: 768px) {
+    .contentBody {
+        flex: 1 1 60%;
+    }
+}
+
+@media(min-width: 1024px) {
+    .contentBody {
+        flex: 1 1 70%;
+    }
+}
+
+
+.strong {
+    color: #1C2F43;
+}

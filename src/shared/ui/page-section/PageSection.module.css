@@ -1,0 +1,125 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+}
+
+@media(min-width: 1440px) {
+    .content {
+        padding-top: 132px;
+        padding-bottom: 132px;
+    }
+}
+
+
+.containerOuter {
+    padding: 0 8px;
+}
+
+.sectionWrapper {
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .sectionWrapper {
+        border-radius: 16px;
+    }
+}
+
+.containerInner {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@media (min-width: 768px) {
+    .containerInner {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .containerInner {
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: 1542px;
+        margin: auto;
+    }
+}
+
+
+.title {
+    font-size: 36px;
+}
+
+
+
+@media(min-width: 1440px) {
+    .title {
+        font-size: 56px;
+    }
+}
+
+.paragraph {
+    font-size: 14px;
+}
+
+.paragraph.color-lightGray {
+    color: #6B6B6B;
+}
+
+.paragraph.color-white {
+    color: white;
+}
+
+
+@media(min-width: 1440px) {
+    .paragraph {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .button {
+        height: 56px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .button {
+        height: 72px;
+        font-size: 18px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+
+.button svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 1440px) {
+    .button svg {
+        width: 28px;
+        height: 28px;
+
+    }
+}
+
+
+.separator {
+    height: 1px;
+    background-color: #6B6B6B;
+    border: none;
+    margin: 0;
+    width: 100%;
+}

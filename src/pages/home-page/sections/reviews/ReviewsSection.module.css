@@ -1,0 +1,262 @@
+.decoratedFrame {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+    .decoratedFrame {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .decoratedFrame {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}
+
+.headerTitle {
+    border-bottom: 2px solid white;
+    padding-bottom: 24px;
+}
+
+.title {
+    color: white;
+}
+
+
+.paragraph {
+    color: white;
+    font-size: 14px;
+}
+
+@media (min-width: 1440px) {
+    .paragraph {
+        font-size: 20px;
+    }
+}
+
+
+
+.headerBodyItems {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .headerBodyItems {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 64px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .headerBodyItems {
+        gap: 219px;
+    }
+}
+
+.item {
+    width: 100%;
+    aspect-ratio: 181/262;
+    border-radius: 8px;
+}
+
+.imageContainer {
+    width: 100%;
+    aspect-ratio: 181/262;
+    height: 290px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .imageContainer {
+        height: 352px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .imageContainer {
+        height: 492px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .imageContainer {
+        height: 524px;
+    }
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+
+.nextButtonIcon {
+    color: white;
+}
+
+.playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+}
+
+.playButton svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+.socialButtons {
+    width: 56px;
+    height: 56px;
+}
+
+.socialButtons svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 768px) {
+    .socialButtons {
+        width: 48px;
+        height: 48px;
+    }
+
+    .socialButtons svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .playButton {
+        width: 72px;
+        height: 72px;
+    }
+
+    .playButton svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .socialButtons {
+        width: 72px;
+        height: 72px;
+    }
+
+    .socialButtons svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+
+.navBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.navButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.navButton {
+    gap: 8px;
+}
+
+.prevButton {
+    padding: 14px 28px 14px 20px;
+    flex: 1 1 40%;
+}
+
+.nextButton {
+    padding: 14px 20px 14px 28px;
+    flex: 1 1 60%;
+}
+
+@media (min-width: 768px) {
+    .navButtons {
+        gap: 32px;
+    }
+
+    .navButton {
+        height: 56px;
+    }
+
+    .prevButton {
+        flex: 1 1 30%;
+    }
+
+    .nextButton {
+
+        flex: 1 1 70%;
+    }
+}
+
+@media (min-width: 1440px) {
+
+
+    .navButton {
+        height: 72px;
+    }
+
+
+}
+
+.customProgressBar {
+    width: 100%;
+    height: 7px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progressFill {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+.progressFill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 0 10px 10px 0;
+}

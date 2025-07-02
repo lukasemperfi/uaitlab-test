@@ -1,0 +1,194 @@
+  .checkoutPage {
+    background: #f6f7f9;
+    padding: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerOuter {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+
+
+  .mobileWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+
+  .section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+
+  .sectionMainTitle {
+    font-size: 28px;
+    line-height: 1.2;
+    color: #1c2f43;
+  }
+
+
+  .sectionTitle {
+    font-size: 18px;
+    color: #1c2f43;
+  }
+
+
+
+  .sectionTitle {
+    font-size: 20px;
+    color: #1C2F43;
+  }
+
+  .sectionBody {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+
+  .mobileInfoText {
+    font-size: 14px;
+    color: #6b6b6b;
+    padding: 0 16px;
+
+  }
+
+
+  .orders {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 16px;
+  }
+
+  .ordersList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ordersTitle {
+    display: none;
+  }
+
+  .fieldsList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contactMethodsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .summarySeparator {
+
+    border-top: 1px solid #E0E0E0;
+
+  }
+
+  .summaryText {
+    font-size: 12px;
+    color: #6b6b6b;
+    text-align: center;
+  }
+
+
+  .desktopWrapper {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .col1 {
+    flex: 1 1 100%;
+  }
+
+  .col2 {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .col3 {
+    flex: 1 1 30%;
+  }
+
+
+
+  @media (min-width: 768px) {
+    .ordersList {
+      gap: 24px;
+    }
+  }
+
+  .desktopWrapper {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .mobileWrapper {
+      display: none;
+    }
+
+    .desktopWrapper {
+      display: flex;
+    }
+
+    .ordersTitle {
+      display: block;
+    }
+
+    .sectionTitle {
+      font-size: 24px;
+    }
+
+  }
+
+  @media (min-width: 1440px) {
+    .sectionMainTitle {
+      font-size: 56px;
+    }
+
+    .section {
+      padding: 32px;
+    }
+
+
+    .col1 {
+      padding-top: 72px;
+    }
+
+    .col2 {
+      gap: 8px;
+    }
+
+    .fieldsList {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    .fieldsListItem {
+      flex: 1 1 48%;
+    }
+  }

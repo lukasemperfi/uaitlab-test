@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+
+}
+
+.costSection {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.costLabel {
+    font-size: 14px;
+    line-height: 17px;
+    color: #6B6B6B;
+    font-weight: 400;
+}
+
+.costAmount {
+    font-size: 28px;
+    color: #1C2F43;
+}
+
+.militaryDiscount {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 11.5px 12px;
+    background: #F7F7F9;
+    border-radius: 4px;
+    min-height: 40px;
+}
+
+.militaryIcon {
+    font-size: 14px;
+    line-height: 17px;
+    color: #6B6B6B;
+    flex-shrink: 0;
+}
+
+.militaryText {
+    font-size: 14px;
+    color: #6B6B6B;
+}
+
+.militaryTextStrong {
+    color: #1C2F43;
+}
+
+.currency {
+    font-size: 14px;
+    color: #6B6B6B;
+}

@@ -1,0 +1,182 @@
+.root {
+    width: 100%;
+    min-height: 575px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1542px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 189px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1C2F43;
+    margin: 0;
+    width: 100%;
+    max-width: 1478px;
+}
+
+.description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6B6B6B;
+    margin: 0;
+    max-width: 672px;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.primaryButton,
+.secondaryButton {
+    width: 480px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.primaryButton {
+    background-color: #0F5EBB;
+    color: white;
+    border: 2px solid #0F5EBB;
+}
+
+.primaryButton:hover {
+    background-color: #0D4FA3;
+    border-color: #0D4FA3;
+    transform: translateY(-1px);
+}
+
+.secondaryButton {
+    background-color: transparent;
+    color: #0F5EBB;
+    border: 2px solid #0F5EBB;
+}
+
+.secondaryButton:hover {
+    background-color: rgba(15, 94, 187, 0.05);
+    transform: translateY(-1px);
+}
+
+.buttonIcon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1920px) {
+    .container {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 60px;
+    }
+
+    .title {
+        font-size: 42px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .root {
+        padding: 60px 0;
+        min-height: 500px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        height: 60px;
+        font-size: 14px;
+    }
+
+    .buttonIcon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .root {
+        padding: 40px 0;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        height: 56px;
+        font-size: 14px;
+    }
+}

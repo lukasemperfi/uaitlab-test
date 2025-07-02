@@ -1,0 +1,35 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-item {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.burger-button {
+    padding: 4px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 1440px) {
+    .logoXs {
+        display: none;
+    }
+}
+
+
+.logoXl {
+    display: none;
+}
+
+@media (min-width: 1440px) {
+    .logoXl {
+        display: block;
+    }
+}

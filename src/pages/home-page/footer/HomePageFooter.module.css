@@ -1,0 +1,186 @@
+.root {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding-bottom: 0px;
+}
+
+.wrapper {
+    background-color: #1C2F43;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .item {
+        display: flex;
+        flex: 1 1 calc(50% - 16px)
+    }
+
+    .item2 {
+        justify-content: flex-end;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .items {
+        gap: 72px;
+        flex-wrap: nowrap;
+    }
+
+
+    .item1 {
+        order: 1;
+        flex: 1 1 calc(54% - 24px)
+    }
+
+    .item2 {
+        order: 3;
+        flex: 1 1 calc(17% - 24px)
+    }
+
+    .item3 {
+        order: 2;
+
+        flex: 1 1 calc(29% - 24px);
+    }
+
+}
+
+
+
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.logoImg {
+    height: 32px;
+}
+
+@media (min-width: 768px) {
+
+    .logoImg {
+        height: 40px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .logoWrapper {
+        justify-content: space-between;
+        max-width: 458px;
+
+    }
+
+
+
+}
+
+.paragraph {
+    font-size: 12px;
+}
+
+@media (min-width: 1440px) {
+    .paragraph {
+        font-size: 16px;
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.navBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+}
+
+.navMenuRoot {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 24px;
+    width: 205px;
+}
+
+.navMenuItem {
+    border: none;
+    line-height: 1;
+
+}
+
+.navMenuLink {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: white;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .navBlock {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .navMenuRoot {
+
+        gap: 24px;
+
+    }
+
+
+}
+
+@media (min-width: 1440px) {
+    .navMenuLink {
+        font-size: 16px;
+    }
+}
+
+.separator {
+    margin-top: 32px;
+    /* border: none; */
+}
+
+
+.copyright {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+@media (min-width: 1920px) {
+    .copyright {
+        justify-content: center;
+
+    }
+}

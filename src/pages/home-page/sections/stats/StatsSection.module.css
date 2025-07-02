@@ -1,0 +1,183 @@
+.root {
+    display: flex;
+    align-items: end;
+    padding: 24px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-bottom: 1px solid #D0D0D0;
+    padding-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+    }
+}
+
+.headerCol1,
+.headerCol2 {
+    flex: 1 1 50%;
+}
+
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    object-fit: cover;
+
+}
+
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.item {
+    position: relative;
+}
+
+.item1,
+.item2 {
+    height: 200px;
+}
+
+.item3,
+.item4,
+.item5,
+.item6,
+.item7 {
+    height: 172px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .item1 {
+        order: 2;
+    }
+
+    .item2 {
+        order: 1;
+    }
+
+    .item3 {
+        order: 3;
+    }
+
+    .item4 {
+        order: 4;
+    }
+
+    .item5 {
+        order: 5;
+    }
+
+    .item6 {
+        order: 6;
+    }
+
+    .item7 {
+        order: 7;
+    }
+
+    .item1,
+    .item2 {
+        flex: 1 1 calc(50% - 8px);
+        height: 272px;
+    }
+
+    .item3,
+    .item4 {
+        flex: 1 1 calc(50% - 8px);
+        height: 200px;
+    }
+
+    .item5,
+    .item6,
+    .item7 {
+        flex: 1 1 calc(33% - 11px);
+    }
+}
+
+@media (min-width: 1440px) {
+    .grid {
+        gap: 32px;
+    }
+
+    .item1,
+    .item2 {
+        flex: 1 1 calc(50% - 16px);
+        height: 400px;
+    }
+
+    .item3,
+    .item4 {
+        flex: 1 1 calc(50% - 16px);
+        height: 320px;
+    }
+
+    .item5,
+    .item6,
+    .item7 {
+        flex: 1 1 calc(33% - 21px);
+        height: 320px;
+    }
+}
+
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.quantity {
+    color: #1C2F43;
+    line-height: 1;
+    font-size: 28px;
+}
+
+.unit {
+    font-size: 16px;
+}
+
+.label {
+    color: #6B6B6B;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .label {
+
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .label {
+
+        font-size: 16px;
+    }
+
+    .quantity {
+        font-size: 48px;
+    }
+
+    .unit {
+        font-size: 24px;
+    }
+}
