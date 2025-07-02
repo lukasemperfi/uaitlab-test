@@ -1,6 +1,10 @@
 import { Button } from "../../../../shared/ui/button";
 import { Navbar } from "../../../../shared/ui/navbar";
-import { BurgerButton, Logo, NavbarItem } from "../../../../shared/ui/navbar/Navbar";
+import {
+  BurgerButton,
+  Logo,
+  NavbarItem,
+} from "../../../../shared/ui/navbar/Navbar";
 import { useState, type FC, type ComponentProps } from "react";
 import styles from "./HomePageNavbar.module.css";
 import cn from "classnames";
@@ -21,6 +25,26 @@ import { SocialButtons } from "../../../../shared/ui/social-buttons/SocialButton
 import { Portal } from "@radix-ui/react-portal";
 import { NavigationMenu } from "./NavigationMenu";
 import { BackpackIcon } from "../../../../shared/icons/BackpackIcon";
+import type { NavMenuItem } from "../../../../shared/ui/nav-menu/NavMenu";
+
+export const navMenuItems: NavMenuItem[] = [
+  {
+    title: "Про нас",
+    href: "#about",
+  },
+  {
+    title: "Ми у цифрах",
+    href: "/#stats",
+  },
+  {
+    title: "Як ми працюємо",
+    href: "/#features",
+  },
+  {
+    title: "Відгуки",
+    href: "/#reviews",
+  },
+];
 
 export const categoryMenuItems = [
   {
@@ -69,6 +93,10 @@ export const HomePageNavbar: FC<HomePageNavbarProps> = (props) => {
     setIsNavMenuOpen((prev) => !prev);
   };
 
+  const closeNavMenu = () => {
+    setIsNavMenuOpen(false);
+  };
+
   useScrollLock(isCategoryMenuOpen);
   useScrollLock(isNavMenuOpen);
 
@@ -81,7 +109,7 @@ export const HomePageNavbar: FC<HomePageNavbarProps> = (props) => {
           {isNavMenuOpen && (
             <Portal>
               <div className={styles.mobileMenuWrapper}>
-                <div className={styles.overlay} onClick={toggleNavMenu} />
+                <div className={styles.overlay} onClick={closeNavMenu} />
                 <div className={styles.mobileMenuContainer}>
                   <div className={styles.mobileMenuInnerWrapper}>
                     <div className={styles.mobileMenuItem}>
@@ -101,7 +129,10 @@ export const HomePageNavbar: FC<HomePageNavbarProps> = (props) => {
                       </div>
                     </div>
                     <div className={styles.mobileMenuItem}>
-                      <NavigationMenu />
+                      <NavigationMenu
+                        navMenuItems={navMenuItems}
+                        onClick={closeNavMenu}
+                      />
                     </div>
                     <div className={styles.mobileMenuItem}>
                       <div className={styles.mobileMenuContact}>
@@ -181,7 +212,10 @@ export const HomePageNavbar: FC<HomePageNavbarProps> = (props) => {
                 </div>
               </Portal>
             )}
-            <NavigationMenu />
+            <NavigationMenu
+              navMenuItems={navMenuItems}
+              onClick={closeNavMenu}
+            />
           </div>
         </NavbarItem>
 

@@ -1,27 +1,18 @@
 import { useLocation } from "react-router";
 import * as NavMenu from "../../../../shared/ui/nav-menu";
 import type { NavMenuItem } from "../../../../shared/ui/nav-menu/NavMenu";
+import type { FC } from "react";
 
-export const navMenuItems: NavMenuItem[] = [
-  {
-    title: "Про нас",
-    href: "#about",
-  },
-  {
-    title: "Ми у цифрах",
-    href: "/#stats",
-  },
-  {
-    title: "Як ми працюємо",
-    href: "/#features",
-  },
-  {
-    title: "Відгуки",
-    href: "/#reviews",
-  },
-];
 
-export const NavigationMenu = () => {
+interface NavigationMenuProps {
+  navMenuItems: NavMenuItem[];
+  onClick: (href: string) => void;
+}
+
+export const NavigationMenu: FC<NavigationMenuProps> = ({
+  navMenuItems,
+  onClick,
+}) => {
   const location = useLocation();
   const isLinkActive = (href: string) => {
     return location.hash === href;
@@ -32,7 +23,11 @@ export const NavigationMenu = () => {
       {navMenuItems.map(({ title, href }, index) => {
         return (
           <NavMenu.Item key={index}>
-            <NavMenu.Link href={href} active={isLinkActive(href)}>
+            <NavMenu.Link
+              href={href}
+              active={isLinkActive(href)}
+              onClick={() => onClick(href)}
+            >
               {title}
             </NavMenu.Link>
           </NavMenu.Item>
