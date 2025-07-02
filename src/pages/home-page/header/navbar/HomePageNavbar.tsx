@@ -243,7 +243,7 @@ export const HomePageNavbar: FC<HomePageNavbarProps> = (props) => {
             <Link to="#">Підтримати</Link>
           </Button>
           <Button className={cn(styles.button, styles.preOrderButton)} asChild>
-            <Link to="#">
+            <Link to="/checkout">
               <BackpackIcon />
               <span className={styles.preOrderText}>Передзамовлення</span>
               <span className={styles.cartCount}>9+</span>
