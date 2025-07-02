@@ -38,6 +38,10 @@
     height: 480px;
 }
 
+.separator {
+    background-color: #D0D0D0;
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
     .features {
         background-color: #f7f7f9;
@@ -54,6 +58,17 @@
     }
 
 
+
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .separator {
+        display: none;
+    }
+
+    .title {
+        display: none;
+    }
 
 }
 
@@ -112,5 +127,13 @@
 
     .col2 {
         width: 27%;
+    }
+
+    .title {
+        display: block;
+    }
+
+    .separator {
+        display: block;
     }
 }
