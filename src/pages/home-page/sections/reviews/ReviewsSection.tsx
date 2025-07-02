@@ -11,8 +11,8 @@ import { Navigation } from "swiper/modules";
 import image1 from "./images/image-1.jpg";
 import image2 from "./images/image-2.jpg";
 
-// import "swiper/css";
-// import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/navigation";
 
 import { useTestimonialSlider } from "../../../../shared/hooks";
 import { CaretRightIcon } from "../../../../shared/icons/CaretRightIcon";
