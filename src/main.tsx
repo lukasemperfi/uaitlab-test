@@ -18,12 +18,12 @@ const router = createBrowserRouter([
         children: [{ index: true, Component: HomePage }],
       },
       {
-        path: "checkout",
+        path: "/checkout",
         Component: CheckoutLayout,
         children: [
           { index: true, Component: CheckoutPage },
           {
-            path: "success",
+            path: "/success",
             Component: SuccessPage,
           },
         ],
