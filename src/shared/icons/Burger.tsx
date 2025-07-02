@@ -7,6 +7,7 @@ export const BurgerIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
     height="32"
     fill="none"
     viewBox="0 0 32 32"
+    {...props}
   >
     <path
       fill="#1C2F43"

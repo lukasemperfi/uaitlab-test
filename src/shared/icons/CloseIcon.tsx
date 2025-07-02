@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const CloseIcon: React.FC<React.SVGProps<SVGElement>> = (props) => (
+export const CloseIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="20"

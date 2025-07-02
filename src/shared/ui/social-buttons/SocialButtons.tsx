@@ -6,7 +6,6 @@ import {
   TikTokIcon,
   YouTubeIcon,
 } from "@/shared/icons";
-import cn from "classnames";
 import { Button, type ButtonProps } from "../button";
 
 const socialItems = [

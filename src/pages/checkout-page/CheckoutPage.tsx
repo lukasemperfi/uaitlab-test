@@ -1,13 +1,6 @@
 import cn from "classnames";
 import React from "react";
-import {
-  FormProvider,
-  useForm,
-  useFormContext,
-  type FieldErrors,
-  type UseFormRegister,
-  type UseFormSetValue,
-} from "react-hook-form";
+import { FormProvider, useForm, useFormContext } from "react-hook-form";
 import styles from "./CheckoutPage.module.css";
 import { ProductCard } from "@/shared/ui/product-card";
 import { Field, Input } from "@/shared/ui/input";
@@ -103,7 +96,7 @@ export const CheckoutPage = () => {
     handleRadioChange,
   };
 
-  const onSubmit = (data: CheckoutFormData) => {
+  const onSubmit = () => {
     navigate("/checkout/success");
   };
 
@@ -186,7 +179,6 @@ const ContactMethodSection = () => {
   const {
     register,
     formState: { errors },
-    setValue,
     selectedContactMethod,
     handleRadioChange,
   } = useFormContext();

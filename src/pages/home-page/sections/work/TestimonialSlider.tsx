@@ -1,12 +1,9 @@
-import { type FC, useState, useEffect, type ReactNode } from "react";
+import { type FC } from "react";
 import { Swiper, SwiperSlide, type SwiperProps } from "swiper/react";
 import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import { type Swiper as SwiperType } from "swiper";
 import styles from "./TestimonialSlider.module.css";
-// import { BackpackIcon } from "@/shared/icons";
-// import { CaretDownIcon } from "@/shared/icons";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
